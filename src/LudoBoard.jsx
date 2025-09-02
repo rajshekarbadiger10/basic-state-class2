@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { useState } from "react"; //automatically included by vs code
 
 export default function LudoBoard(){
     let [Moves,setMoves] = useState({blue:0,yellow:0,green:0,red:0});
     let [arr,setarr] = useState(["no moves"]);
-
-
 
     let updateBlue = () => {
         setMoves((prevvalue) => {
@@ -22,7 +20,7 @@ export default function LudoBoard(){
             <div className="board">
                 <p>{arr}</p>
                 <p>Blue moves = {Moves.blue} </p>
-                <button style={{backgroundColor:"blue"}} onClick={updateBlue}>+1</button>
+                <button style={{bckgroundColor:"blue"}} onClick={updateBlue}>+1</button>
                 <p>yellow moves = {Moves.yellow} </p>
                 <button style={{backgroundColor:"yellow"}} onClick={updateYellow}>+1</button>
                 <p>Green moves = {Moves.green}</p>
